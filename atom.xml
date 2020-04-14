@@ -6,7 +6,7 @@
   <link href="/flower02/atom.xml" rel="self"/>
   
   <link href="https://shirleydora.github.io/flower02/"/>
-  <updated>2020-04-14T03:39:21.687Z</updated>
+  <updated>2020-04-14T11:49:07.687Z</updated>
   <id>https://shirleydora.github.io/flower02/</id>
   
   <author>
@@ -17,11 +17,11 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://shirleydora.github.io/flower02/2020/04/14/hello-world/"/>
-    <id>https://shirleydora.github.io/flower02/2020/04/14/hello-world/</id>
-    <published>2020-04-14T03:39:21.687Z</published>
-    <updated>2020-04-14T03:39:21.687Z</updated>
+    <title>我的web-api学习笔记</title>
+    <link href="https://shirleydora.github.io/flower02/2020/04/14/webapibiji/02-web-api/"/>
+    <id>https://shirleydora.github.io/flower02/2020/04/14/webapibiji/02-web-api/</id>
+    <published>2020-04-14T10:57:53.590Z</published>
+    <updated>2020-04-14T11:49:07.687Z</updated>
     
     <summary type="html">
     
@@ -29,7 +29,84 @@
       
         
         
-          &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a
+          &lt;h1 id=&quot;Web-API&quot;&gt;&lt;a href=&quot;#Web-API&quot; class=&quot;headerlink&quot; title=&quot;Web API&quot;&gt;&lt;/a&gt;Web API&lt;/h1&gt;&lt;h2 id=&quot;Web-API介绍&quot;&gt;&lt;a href=&quot;#Web-API介绍&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="web学习" scheme="https://shirleydora.github.io/flower02/tags/web%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的js学习笔记</title>
+    <link href="https://shirleydora.github.io/flower02/2020/04/14/jsbiji/01-javascript-ji-chu/"/>
+    <id>https://shirleydora.github.io/flower02/2020/04/14/jsbiji/01-javascript-ji-chu/</id>
+    <published>2020-04-14T10:57:44.600Z</published>
+    <updated>2020-04-14T11:49:04.706Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;JavaScript基础&quot;&gt;&lt;a href=&quot;#JavaScript基础&quot; class=&quot;headerlink&quot; title=&quot;JavaScript基础&quot;&gt;&lt;/a&gt;JavaScript基础&lt;/h1&gt;&lt;p&gt;HTML和CSS   京东&lt;/p&gt;
+&lt;h2
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="web学习" scheme="https://shirleydora.github.io/flower02/tags/web%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的css学习笔记</title>
+    <link href="https://shirleydora.github.io/flower02/2020/04/14/cssbiji/css/"/>
+    <id>https://shirleydora.github.io/flower02/2020/04/14/cssbiji/css/</id>
+    <published>2020-04-14T10:57:04.500Z</published>
+    <updated>2020-04-14T11:40:40.412Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;学习目标&quot;&gt;&lt;a href=&quot;#学习目标&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+    
+      <category term="css" scheme="https://shirleydora.github.io/flower02/tags/css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://shirleydora.github.io/flower02/2020/04/14/hello-world/"/>
+    <id>https://shirleydora.github.io/flower02/2020/04/14/hello-world/</id>
+    <published>2020-04-14T03:39:21.687Z</published>
+    <updated>2020-04-14T11:54:31.328Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;Welcome to [Flower]&lt;/p&gt;
+&lt;h3 id=&quot;git-bush-here&quot;&gt;&lt;a href=&quot;#git-bush-here&quot; class=&quot;headerlink&quot; title=&quot;$ git bush here&quot;&gt;&lt;/a&gt;$ git bush
         
       
     
