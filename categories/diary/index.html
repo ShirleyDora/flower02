@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="标签, Flower">
+    <meta name="keywords" content="分类: diary, Flower">
     <meta name="description" content="吟诗赏雪，静看柳絮随风">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>标签 | Flower</title>
+    <title>分类: diary | Flower</title>
     <link rel="icon" type="image/png" href="/flower02/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/flower02/libs/awesome/css/all.css">
@@ -350,82 +350,91 @@
 
     
 
-<div id="tags" class="container chip-container">
+<div id="category-cloud" class="container chip-container">
     <div class="card">
         <div class="card-content">
             <div class="tag-title center-align">
-                <i class="fas fa-tags"></i>&nbsp;&nbsp;文章标签
+                <i class="fas fa-bookmark"></i>&nbsp;&nbsp;文章分类
             </div>
             <div class="tag-chips">
                 
                 
-                <a href="/flower02/tags/js/" title="js: 1">
+                
+                <a href="/flower02/categories/diary/" title="diary: 1">
                     <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="js" style="background-color: #F9EBEA;">js
+                             chip-active "
+                            style="background-color: #F9EBEA;">diary
                         <span class="tag-length">1</span>
                     </span>
                 </a>
                 
-                
-                <a href="/flower02/tags/web%E5%AD%A6%E4%B9%A0/" title="web学习: 3">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="web学习" style="background-color: #F5EEF8;">web学习
-                        <span class="tag-length">3</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/flower02/tags/web-api/" title="web-api: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="web-api" style="background-color: #D5F5E3;">web-api
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
-                
-                
-                <a href="/flower02/tags/css/" title="css: 1">
-                    <span class="chip center-align waves-effect waves-light
-                             chip-default "
-                            data-tagname="css" style="background-color: #E8F8F5;">css
-                        <span class="tag-length">1</span>
-                    </span>
-                </a>
                 
             </div>
         </div>
     </div>
 </div>
 
-    
-    <link rel="stylesheet" type="text/css" href="/flower02/libs/jqcloud/jqcloud.css">
-<style type="text/css">
-    #tag-wordcloud {
-        width: 100%;
-        height: 300px;
-    }
-</style>
-
-<div class="container" data-aos="fade-up">
-    <div class="card">
-        <div id="tag-wordcloud" class="card-content"></div>
-    </div>
-</div>
-
-<script type="text/javascript" src="/flower02/libs/jqcloud/jqcloud-1.0.4.min.js"></script>
-<script type="text/javascript">
-    
-
-    $('#tag-wordcloud').jQCloud([{"text":"js","weight":1,"link":"/flower02/tags/js/"},{"text":"web学习","weight":3,"link":"/flower02/tags/web%E5%AD%A6%E4%B9%A0/"},{"text":"web-api","weight":1,"link":"/flower02/tags/web-api/"},{"text":"css","weight":1,"link":"/flower02/tags/css/"}], {
-        autoResize: true
-    });
-</script>
 
     
 
+    <article id="articles" class="container articles">
+        <div class="row tags-posts">
+            
+            <div class="article tag-post col s12 m6 l4" data-aos="zoom-in">
+                <div class="card">
+                    <a href="/flower02/posts/1.html">
+                        <div class="card-image tag-image">
+                            
+                            
+                            <img src="/flower02/medias/featureimages/10.jpg" class="responsive-img" alt="我的css学习笔记">
+                            
+                            <span class="card-title">我的css学习笔记</span>
+                        </div>
+                    </a>
+                    <div class="card-content article-content">
+                        <div class="summary block-with-text">
+                            
+                                CSS 网页的美容师,CSS的出现，拯救了混乱的HTML，当让更加拯救了我们web开发者。 让我们的网页更加丰富多彩。
+                            
+                        </div>
+                        <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-08-10
+                            </span>
+                            <span class="publish-author">
+                                
+                                <i class="fas fa-bookmark fa-fw icon-category"></i>
+                                
+                                <a href="/flower02/categories/diary/" class="post-category">
+                                    diary
+                                </a>
+                                
+                                
+                            </span>
+                        </div>
+                    </div>
+
+                    
+                    <div class="card-action article-tags">
+                        
+                        <a href="/flower02/tags/web%E5%AD%A6%E4%B9%A0/">
+                            <span class="chip bg-color">web学习</span>
+                        </a>
+                        
+                        <a href="/flower02/tags/css/">
+                            <span class="chip bg-color">css</span>
+                        </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </article>
 </main>
+
+
 
 
     <footer class="page-footer bg-color">

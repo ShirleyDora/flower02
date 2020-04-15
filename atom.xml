@@ -18,8 +18,8 @@
   
   <entry>
     <title>我的web-api学习笔记</title>
-    <link href="https://shirleydora.github.io/flower02/2020/04/14/webapibiji/02-web-api/"/>
-    <id>https://shirleydora.github.io/flower02/2020/04/14/webapibiji/02-web-api/</id>
+    <link href="https://shirleydora.github.io/flower02/posts/22843.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/22843.html</id>
     <published>2020-04-14T11:35:00.000Z</published>
     <updated>2020-04-14T11:35:00.000Z</updated>
     
@@ -44,9 +44,9 @@
   </entry>
   
   <entry>
-    <title>Hello World</title>
-    <link href="https://shirleydora.github.io/flower02/2020/04/14/hello-world/"/>
-    <id>https://shirleydora.github.io/flower02/2020/04/14/hello-world/</id>
+    <title>Flower 写作格式</title>
+    <link href="https://shirleydora.github.io/flower02/posts/7811.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/7811.html</id>
     <published>2020-04-14T03:39:21.687Z</published>
     <updated>2020-04-14T03:39:21.687Z</updated>
     
@@ -69,8 +69,8 @@
   
   <entry>
     <title>我的js学习笔记</title>
-    <link href="https://shirleydora.github.io/flower02/2020/01/14/jsbiji/01-javascript-ji-chu/"/>
-    <id>https://shirleydora.github.io/flower02/2020/01/14/jsbiji/01-javascript-ji-chu/</id>
+    <link href="https://shirleydora.github.io/flower02/posts/18043.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/18043.html</id>
     <published>2020-01-14T11:35:00.000Z</published>
     <updated>2020-01-14T11:35:00.000Z</updated>
     
@@ -80,8 +80,7 @@
       
         
         
-          &lt;h1 id=&quot;JavaScript基础&quot;&gt;&lt;a href=&quot;#JavaScript基础&quot; class=&quot;headerlink&quot; title=&quot;JavaScript基础&quot;&gt;&lt;/a&gt;JavaScript基础&lt;/h1&gt;&lt;p&gt;HTML和CSS   京东&lt;/p&gt;
-&lt;h2
+          &lt;h1 id=&quot;JavaScript基础&quot;&gt;&lt;a href=&quot;#JavaScript基础&quot; class=&quot;headerlink&quot; title=&quot;JavaScript基础&quot;&gt;&lt;/a&gt;JavaScript基础&lt;/h1&gt;&lt;h2 id=&quot;学习娱乐&quot;&gt;&lt;a href=&quot;#学习娱乐&quot;
         
       
     
@@ -97,8 +96,8 @@
   
   <entry>
     <title>我的css学习笔记</title>
-    <link href="https://shirleydora.github.io/flower02/2019/08/10/cssbiji/css/"/>
-    <id>https://shirleydora.github.io/flower02/2019/08/10/cssbiji/css/</id>
+    <link href="https://shirleydora.github.io/flower02/posts/1.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/1.html</id>
     <published>2019-08-10T11:30:00.000Z</published>
     <updated>2019-08-10T11:30:00.000Z</updated>
     
@@ -114,6 +113,8 @@
     
     </summary>
     
+    
+      <category term="diary" scheme="https://shirleydora.github.io/flower02/categories/diary/"/>
     
     
       <category term="web学习" scheme="https://shirleydora.github.io/flower02/tags/web%E5%AD%A6%E4%B9%A0/"/>
