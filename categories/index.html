@@ -339,7 +339,7 @@
 
 <script>
     // 每天切换 banner 图.  Switch banner image every day.
-    $('.bg-cover').css('background-image', 'url(/flower02/medias/banner/3.jpg)');
+    $('.bg-cover').css('background-image', 'url(/flower02/medias/banner/0.jpg)');
 </script>
 
 
@@ -360,11 +360,20 @@
                 
                 
                 
-                <a href="/flower02/categories/diary/" title="diary: 1">
+                <a href="/flower02/categories/diary/" title="diary: 2">
                     <span class="chip center-align waves-effect waves-light
                              chip-default "
                             style="background-color: #F9EBEA;">diary
-                        <span class="tag-length">1</span>
+                        <span class="tag-length">2</span>
+                    </span>
+                </a>
+                
+                
+                <a href="/flower02/categories/web%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="web学习笔记: 3">
+                    <span class="chip center-align waves-effect waves-light
+                             chip-default "
+                            style="background-color: #F5EEF8;">web学习笔记
+                        <span class="tag-length">3</span>
                     </span>
                 </a>
                 
@@ -411,7 +420,7 @@
                     color: '#3C4858'
                 }
             },
-            indicator: [{"name":"diary","max":2}],
+            indicator: [{"name":"diary","max":5},{"name":"web学习笔记","max":5}],
             nameGap: 5,
             center: ['50%','55%'],
             radius: '66%'
@@ -422,7 +431,7 @@
             itemStyle: {normal: {areaStyle: {type: 'default'}}},
             data : [
                 {
-                    value : [1],
+                    value : [2,3],
                     name : '文章分类数量'
                 }
             ]
@@ -497,7 +506,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">46.3k</span>&nbsp;字
+                class="white-color">49.3k</span>&nbsp;字
             
             
             
