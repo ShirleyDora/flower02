@@ -1,0 +1,2008 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="我的paddlepaddle学习笔记, Flower">
+    <meta name="description" content="吟诗赏雪，静看柳絮随风">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>我的paddlepaddle学习笔记 | Flower</title>
+    <link rel="icon" type="image/png" href="/flower02/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/flower02/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/flower02/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/flower02/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/flower02/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/flower02/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/flower02/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/flower02/css/my.css">
+
+    <script src="/flower02/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 4.2.1">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+<link rel="alternate" href="/flower02/atom.xml" title="Flower" type="application/atom+xml">
+<link rel="stylesheet" href="/flower02/css/prism-tomorrow.css" type="text/css">
+<style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
+</head>
+
+
+<body>
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/flower02/" class="waves-effect waves-light">
+                    
+                    <img src="/flower02/medias/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">Flower</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/flower02/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/flower02/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/flower02/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/flower02/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/flower02/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/flower02/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/flower02/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="/flower02/medias/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">Flower</div>
+        <div class="logo-desc">
+            
+            吟诗赏雪，静看柳絮随风
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/flower02/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/flower02/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/flower02/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/flower02/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/flower02/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/flower02/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/flower02/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/ShirleyDora" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="https://github.com/ShirleyDora" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/flower02/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，将返回主页！');
+                location.href = '/flower02/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/flower02/medias/featureimages/21.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">我的paddlepaddle学习笔记</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/flower02/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        margin: 35px 0 15px 0;
+        padding-left: 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        height: calc(100vh - 250px);
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    .toc-fixed .toc-link::before{
+        position: fixed!important;/*当toc的位置改为fixed时，.toc-link::before也要改为fixed*/
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #toc-content .is-active-link::before {
+        background-color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/flower02/tags/%E7%AE%97%E6%B3%95/">
+                                <span class="chip bg-color">算法</span>
+                            </a>
+                        
+                            <a href="/flower02/tags/paddlepaddle/">
+                                <span class="chip bg-color">paddlepaddle</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/" class="post-category">
+                                知识分享
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2019-08-10
+                </div>
+                
+
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    2.8k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    16 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h1 id="paddlepaddle学习-by-Shirley"><a href="#paddlepaddle学习-by-Shirley" class="headerlink" title="paddlepaddle学习-by Shirley"></a>paddlepaddle学习-by Shirley</h1><h2 id="一、Windows下的本地安装"><a href="#一、Windows下的本地安装" class="headerlink" title="一、Windows下的本地安装"></a>一、Windows下的本地安装</h2><ul>
+<li>需要确认您的 Windows 7/8/10 是 64 位操作系统*</li>
+<li>确认您需要安装PaddlePaddle 的 python版本是3.5.1+/3.6+/3.7+，<em>因为您计算机可能有多个python</em></li>
+</ul>
+<pre><code>python --version</code></pre><ul>
+<li>如果python版本不是3.5.1+/3.6+/3.7+，请您确认python的路径是否是您预期的位置</li>
+</ul>
+<pre><code>where python</code></pre><ul>
+<li>其中python3.5.1+/3.6+/3.7+的安装目录应位于第一行，如果不是，您可以通过以下任意方法调整：<ul>
+<li>将所有命令行中的 <code>python</code>替换为 <code>python3</code>的安装路径（例如C:\Python36\python.exe) </li>
+<li>在环境变量中，将 <code>python3</code>的安装路径设置在第一顺序位（请在控制面板-&gt;系统属性-&gt;环境变量-&gt;PATH中修改)</li>
+</ul>
+</li>
+<li>如果python版本是3.5.1+/3.6+/3.7+，请确认 Python 有对应的 pip，检查 Python 对应的 pip 的版本，确认是 9.0.1+：</li>
+</ul>
+<pre><code>python -m ensurepip
+python -m pip --version</code></pre><ul>
+<li>确认 Python 和 pip 是 64 bit，并且处理器架构是x86_64（或称作 x64、Intel 64、AMD64）架构，目前PaddlePaddle不支持arm64架构<br>下面的第一行输出的是 “64bit”，第二行输出的是 “x86_64”、”x64” 或 “AMD64” 即可：</li>
+</ul>
+<pre><code>python -c "import platform;print(platform.architecture()[0]);print(platform.machine())"</code></pre><ul>
+<li>执行以下命令安装（推荐使用百度源）：</li>
+</ul>
+<pre><code>python -m pip install paddlepaddle -i https://mirror.baidu.com/pypi/simple</code></pre><p>或</p>
+<pre><code>python -m pip install paddlepaddle -i https://pypi.tuna.tsinghua.edu.cn/simple</code></pre><p>验证信息</p>
+<p>使用 <code>python</code> 进入python解释器，输入<code>import paddle.fluid</code> ，再输入 <code>paddle.fluid.install_check.run_check()</code>。<br>如果出现 <code>Your Paddle Fluid is installed successfully!</code>，说明您已成功安装。</p>
+<p>说明信息</p>
+<p>*同时要求处理器支持 MKL；并且架构是x86_64，PaddlePaddle不支持arm64架构</p>
+<h2 id="二、使用飞桨构建波士顿房价预测模型-并进行数据分析"><a href="#二、使用飞桨构建波士顿房价预测模型-并进行数据分析" class="headerlink" title="二、使用飞桨构建波士顿房价预测模型,并进行数据分析"></a>二、使用飞桨构建波士顿房价预测模型,并进行数据分析</h2><pre class=" language-python"><code class="language-python"><span class="token keyword">from</span> __future__ <span class="token keyword">import</span> print_function
+
+<span class="token keyword">import</span> sys
+<span class="token keyword">import</span> argparse
+
+<span class="token keyword">import</span> math
+<span class="token keyword">import</span> numpy
+
+<span class="token keyword">import</span> paddle
+<span class="token keyword">import</span> paddle<span class="token punctuation">.</span>fluid <span class="token keyword">as</span> fluid
+
+
+<span class="token keyword">def</span> <span class="token function">parse_args</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    parser <span class="token operator">=</span> argparse<span class="token punctuation">.</span>ArgumentParser<span class="token punctuation">(</span><span class="token string">"fit_a_line"</span><span class="token punctuation">)</span>
+    parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span>
+        <span class="token string">'--enable_ce'</span><span class="token punctuation">,</span>
+        action<span class="token operator">=</span><span class="token string">'store_true'</span><span class="token punctuation">,</span>
+        help<span class="token operator">=</span><span class="token string">"If set, run the task with continuous evaluation logs."</span><span class="token punctuation">)</span>
+    parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span>
+        <span class="token string">'--use_gpu'</span><span class="token punctuation">,</span>
+        type<span class="token operator">=</span>bool<span class="token punctuation">,</span>
+        default<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">,</span>
+        help<span class="token operator">=</span><span class="token string">"Whether to use GPU or not."</span><span class="token punctuation">)</span>
+    parser<span class="token punctuation">.</span>add_argument<span class="token punctuation">(</span>
+        <span class="token string">'--num_epochs'</span><span class="token punctuation">,</span> type<span class="token operator">=</span>int<span class="token punctuation">,</span> default<span class="token operator">=</span><span class="token number">100</span><span class="token punctuation">,</span> help<span class="token operator">=</span><span class="token string">"number of epochs."</span><span class="token punctuation">)</span>
+    args <span class="token operator">=</span> parser<span class="token punctuation">.</span>parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    <span class="token keyword">return</span> args
+
+
+<span class="token comment" spellcheck="true"># For training test cost</span>
+<span class="token keyword">def</span> <span class="token function">train_test</span><span class="token punctuation">(</span>executor<span class="token punctuation">,</span> program<span class="token punctuation">,</span> reader<span class="token punctuation">,</span> feeder<span class="token punctuation">,</span> fetch_list<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    accumulated <span class="token operator">=</span> <span class="token number">1</span> <span class="token operator">*</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    count <span class="token operator">=</span> <span class="token number">0</span>
+    <span class="token keyword">for</span> data_test <span class="token keyword">in</span> reader<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+        outs <span class="token operator">=</span> executor<span class="token punctuation">.</span>run<span class="token punctuation">(</span>
+            program<span class="token operator">=</span>program<span class="token punctuation">,</span> feed<span class="token operator">=</span>feeder<span class="token punctuation">.</span>feed<span class="token punctuation">(</span>data_test<span class="token punctuation">)</span><span class="token punctuation">,</span> fetch_list<span class="token operator">=</span>fetch_list<span class="token punctuation">)</span>
+        accumulated <span class="token operator">=</span> <span class="token punctuation">[</span>x_c<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">+</span> x_c<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> x_c <span class="token keyword">in</span> zip<span class="token punctuation">(</span>accumulated<span class="token punctuation">,</span> outs<span class="token punctuation">)</span><span class="token punctuation">]</span>
+        count <span class="token operator">+=</span> <span class="token number">1</span>
+    <span class="token keyword">return</span> <span class="token punctuation">[</span>x_d <span class="token operator">/</span> count <span class="token keyword">for</span> x_d <span class="token keyword">in</span> accumulated<span class="token punctuation">]</span>
+
+
+<span class="token keyword">def</span> <span class="token function">save_result</span><span class="token punctuation">(</span>points1<span class="token punctuation">,</span> points2<span class="token punctuation">)</span><span class="token punctuation">:</span>
+    <span class="token keyword">import</span> matplotlib
+    matplotlib<span class="token punctuation">.</span>use<span class="token punctuation">(</span><span class="token string">'Agg'</span><span class="token punctuation">)</span>
+    <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
+    x1 <span class="token operator">=</span> <span class="token punctuation">[</span>idx <span class="token keyword">for</span> idx <span class="token keyword">in</span> range<span class="token punctuation">(</span>len<span class="token punctuation">(</span>points1<span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">]</span>
+    y1 <span class="token operator">=</span> points1
+    y2 <span class="token operator">=</span> points2
+    l1 <span class="token operator">=</span> plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> <span class="token string">'r--'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'predictions'</span><span class="token punctuation">)</span>
+    l2 <span class="token operator">=</span> plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> <span class="token string">'g--'</span><span class="token punctuation">,</span> label<span class="token operator">=</span><span class="token string">'GT'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>x1<span class="token punctuation">,</span> y1<span class="token punctuation">,</span> <span class="token string">'ro-'</span><span class="token punctuation">,</span> x1<span class="token punctuation">,</span> y2<span class="token punctuation">,</span> <span class="token string">'g+-'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>title<span class="token punctuation">(</span><span class="token string">'predictions VS GT'</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>legend<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    plt<span class="token punctuation">.</span>savefig<span class="token punctuation">(</span><span class="token string">'./image/prediction_gt.png'</span><span class="token punctuation">)</span>
+
+
+<span class="token keyword">def</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+    batch_size <span class="token operator">=</span> <span class="token number">20</span>
+
+    <span class="token keyword">if</span> args<span class="token punctuation">.</span>enable_ce<span class="token punctuation">:</span>
+        train_reader <span class="token operator">=</span> paddle<span class="token punctuation">.</span>batch<span class="token punctuation">(</span>
+            paddle<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>uci_housing<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">)</span>
+        test_reader <span class="token operator">=</span> paddle<span class="token punctuation">.</span>batch<span class="token punctuation">(</span>
+            paddle<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>uci_housing<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">)</span>
+    <span class="token keyword">else</span><span class="token punctuation">:</span>
+        train_reader <span class="token operator">=</span> paddle<span class="token punctuation">.</span>batch<span class="token punctuation">(</span>
+            paddle<span class="token punctuation">.</span>reader<span class="token punctuation">.</span>shuffle<span class="token punctuation">(</span>
+                paddle<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>uci_housing<span class="token punctuation">.</span>train<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> buf_size<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">)</span>
+        test_reader <span class="token operator">=</span> paddle<span class="token punctuation">.</span>batch<span class="token punctuation">(</span>
+            paddle<span class="token punctuation">.</span>reader<span class="token punctuation">.</span>shuffle<span class="token punctuation">(</span>
+                paddle<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>uci_housing<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> buf_size<span class="token operator">=</span><span class="token number">500</span><span class="token punctuation">)</span><span class="token punctuation">,</span>
+            batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true"># feature vector of length 13</span>
+    x <span class="token operator">=</span> fluid<span class="token punctuation">.</span>data<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'x'</span><span class="token punctuation">,</span> shape<span class="token operator">=</span><span class="token punctuation">[</span>None<span class="token punctuation">,</span> <span class="token number">13</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'float32'</span><span class="token punctuation">)</span>
+    y <span class="token operator">=</span> fluid<span class="token punctuation">.</span>data<span class="token punctuation">(</span>name<span class="token operator">=</span><span class="token string">'y'</span><span class="token punctuation">,</span> shape<span class="token operator">=</span><span class="token punctuation">[</span>None<span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> dtype<span class="token operator">=</span><span class="token string">'float32'</span><span class="token punctuation">)</span>
+
+    main_program <span class="token operator">=</span> fluid<span class="token punctuation">.</span>default_main_program<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    startup_program <span class="token operator">=</span> fluid<span class="token punctuation">.</span>default_startup_program<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token keyword">if</span> args<span class="token punctuation">.</span>enable_ce<span class="token punctuation">:</span>
+        main_program<span class="token punctuation">.</span>random_seed <span class="token operator">=</span> <span class="token number">90</span>
+        startup_program<span class="token punctuation">.</span>random_seed <span class="token operator">=</span> <span class="token number">90</span>
+
+    y_predict <span class="token operator">=</span> fluid<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>fc<span class="token punctuation">(</span>input<span class="token operator">=</span>x<span class="token punctuation">,</span> size<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> act<span class="token operator">=</span>None<span class="token punctuation">)</span>
+    cost <span class="token operator">=</span> fluid<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>square_error_cost<span class="token punctuation">(</span>input<span class="token operator">=</span>y_predict<span class="token punctuation">,</span> label<span class="token operator">=</span>y<span class="token punctuation">)</span>
+    avg_loss <span class="token operator">=</span> fluid<span class="token punctuation">.</span>layers<span class="token punctuation">.</span>mean<span class="token punctuation">(</span>cost<span class="token punctuation">)</span>
+
+    test_program <span class="token operator">=</span> main_program<span class="token punctuation">.</span>clone<span class="token punctuation">(</span>for_test<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span>
+
+    sgd_optimizer <span class="token operator">=</span> fluid<span class="token punctuation">.</span>optimizer<span class="token punctuation">.</span>SGD<span class="token punctuation">(</span>learning_rate<span class="token operator">=</span><span class="token number">0.001</span><span class="token punctuation">)</span>
+    sgd_optimizer<span class="token punctuation">.</span>minimize<span class="token punctuation">(</span>avg_loss<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true"># can use CPU or GPU</span>
+    use_cuda <span class="token operator">=</span> args<span class="token punctuation">.</span>use_gpu
+    place <span class="token operator">=</span> fluid<span class="token punctuation">.</span>CUDAPlace<span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">)</span> <span class="token keyword">if</span> use_cuda <span class="token keyword">else</span> fluid<span class="token punctuation">.</span>CPUPlace<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    exe <span class="token operator">=</span> fluid<span class="token punctuation">.</span>Executor<span class="token punctuation">(</span>place<span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true"># Specify the directory to save the parameters</span>
+    params_dirname <span class="token operator">=</span> <span class="token string">"fit_a_line.inference.model"</span>
+    num_epochs <span class="token operator">=</span> args<span class="token punctuation">.</span>num_epochs
+
+    <span class="token comment" spellcheck="true"># main train loop.</span>
+    feeder <span class="token operator">=</span> fluid<span class="token punctuation">.</span>DataFeeder<span class="token punctuation">(</span>place<span class="token operator">=</span>place<span class="token punctuation">,</span> feed_list<span class="token operator">=</span><span class="token punctuation">[</span>x<span class="token punctuation">,</span> y<span class="token punctuation">]</span><span class="token punctuation">)</span>
+    exe<span class="token punctuation">.</span>run<span class="token punctuation">(</span>startup_program<span class="token punctuation">)</span>
+
+    train_prompt <span class="token operator">=</span> <span class="token string">"Train cost"</span>
+    test_prompt <span class="token operator">=</span> <span class="token string">"Test cost"</span>
+    step <span class="token operator">=</span> <span class="token number">0</span>
+
+    exe_test <span class="token operator">=</span> fluid<span class="token punctuation">.</span>Executor<span class="token punctuation">(</span>place<span class="token punctuation">)</span>
+
+    <span class="token keyword">for</span> pass_id <span class="token keyword">in</span> range<span class="token punctuation">(</span>num_epochs<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token keyword">for</span> data_train <span class="token keyword">in</span> train_reader<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            avg_loss_value<span class="token punctuation">,</span> <span class="token operator">=</span> exe<span class="token punctuation">.</span>run<span class="token punctuation">(</span>
+                main_program<span class="token punctuation">,</span>
+                feed<span class="token operator">=</span>feeder<span class="token punctuation">.</span>feed<span class="token punctuation">(</span>data_train<span class="token punctuation">)</span><span class="token punctuation">,</span>
+                fetch_list<span class="token operator">=</span><span class="token punctuation">[</span>avg_loss<span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">if</span> step <span class="token operator">%</span> <span class="token number">10</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>  <span class="token comment" spellcheck="true"># record a train cost every 10 batches</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s, Step %d, Cost %f"</span> <span class="token operator">%</span>
+                      <span class="token punctuation">(</span>train_prompt<span class="token punctuation">,</span> step<span class="token punctuation">,</span> avg_loss_value<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+            <span class="token keyword">if</span> step <span class="token operator">%</span> <span class="token number">100</span> <span class="token operator">==</span> <span class="token number">0</span><span class="token punctuation">:</span>  <span class="token comment" spellcheck="true"># record a test cost every 100 batches</span>
+                test_metics <span class="token operator">=</span> train_test<span class="token punctuation">(</span>
+                    executor<span class="token operator">=</span>exe_test<span class="token punctuation">,</span>
+                    program<span class="token operator">=</span>test_program<span class="token punctuation">,</span>
+                    reader<span class="token operator">=</span>test_reader<span class="token punctuation">,</span>
+                    fetch_list<span class="token operator">=</span><span class="token punctuation">[</span>avg_loss<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                    feeder<span class="token operator">=</span>feeder<span class="token punctuation">)</span>
+                <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%s, Step %d, Cost %f"</span> <span class="token operator">%</span>
+                      <span class="token punctuation">(</span>test_prompt<span class="token punctuation">,</span> step<span class="token punctuation">,</span> test_metics<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+                <span class="token comment" spellcheck="true"># If the accuracy is good enough, we can stop the training.</span>
+                <span class="token keyword">if</span> test_metics<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">&lt;</span> <span class="token number">10.0</span><span class="token punctuation">:</span>
+                    <span class="token keyword">break</span>
+
+            step <span class="token operator">+=</span> <span class="token number">1</span>
+
+            <span class="token keyword">if</span> math<span class="token punctuation">.</span>isnan<span class="token punctuation">(</span>float<span class="token punctuation">(</span>avg_loss_value<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+                sys<span class="token punctuation">.</span>exit<span class="token punctuation">(</span><span class="token string">"got NaN loss, training failed."</span><span class="token punctuation">)</span>
+        <span class="token keyword">if</span> params_dirname <span class="token keyword">is</span> <span class="token operator">not</span> None<span class="token punctuation">:</span>
+            <span class="token comment" spellcheck="true"># We can save the trained parameters for the inferences later</span>
+            fluid<span class="token punctuation">.</span>io<span class="token punctuation">.</span>save_inference_model<span class="token punctuation">(</span>params_dirname<span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token string">'x'</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span>y_predict<span class="token punctuation">]</span><span class="token punctuation">,</span>
+                                          exe<span class="token punctuation">)</span>
+
+        <span class="token keyword">if</span> args<span class="token punctuation">.</span>enable_ce <span class="token operator">and</span> pass_id <span class="token operator">==</span> args<span class="token punctuation">.</span>num_epochs <span class="token operator">-</span> <span class="token number">1</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"kpis\ttrain_cost\t%f"</span> <span class="token operator">%</span> avg_loss_value<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"kpis\ttest_cost\t%f"</span> <span class="token operator">%</span> test_metics<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+    infer_exe <span class="token operator">=</span> fluid<span class="token punctuation">.</span>Executor<span class="token punctuation">(</span>place<span class="token punctuation">)</span>
+    inference_scope <span class="token operator">=</span> fluid<span class="token punctuation">.</span>core<span class="token punctuation">.</span>Scope<span class="token punctuation">(</span><span class="token punctuation">)</span>
+
+    <span class="token comment" spellcheck="true"># infer</span>
+    <span class="token keyword">with</span> fluid<span class="token punctuation">.</span>scope_guard<span class="token punctuation">(</span>inference_scope<span class="token punctuation">)</span><span class="token punctuation">:</span>
+        <span class="token punctuation">[</span>inference_program<span class="token punctuation">,</span> feed_target_names<span class="token punctuation">,</span> fetch_targets
+         <span class="token punctuation">]</span> <span class="token operator">=</span> fluid<span class="token punctuation">.</span>io<span class="token punctuation">.</span>load_inference_model<span class="token punctuation">(</span>params_dirname<span class="token punctuation">,</span> infer_exe<span class="token punctuation">)</span>
+        batch_size <span class="token operator">=</span> <span class="token number">10</span>
+
+        infer_reader <span class="token operator">=</span> paddle<span class="token punctuation">.</span>batch<span class="token punctuation">(</span>
+            paddle<span class="token punctuation">.</span>dataset<span class="token punctuation">.</span>uci_housing<span class="token punctuation">.</span>test<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> batch_size<span class="token operator">=</span>batch_size<span class="token punctuation">)</span>
+
+        infer_data <span class="token operator">=</span> next<span class="token punctuation">(</span>infer_reader<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+        infer_feat <span class="token operator">=</span> numpy<span class="token punctuation">.</span>array<span class="token punctuation">(</span>
+            <span class="token punctuation">[</span>data<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token keyword">for</span> data <span class="token keyword">in</span> infer_data<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token string">"float32"</span><span class="token punctuation">)</span>
+        infer_label <span class="token operator">=</span> numpy<span class="token punctuation">.</span>array<span class="token punctuation">(</span>
+            <span class="token punctuation">[</span>data<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span> <span class="token keyword">for</span> data <span class="token keyword">in</span> infer_data<span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">.</span>astype<span class="token punctuation">(</span><span class="token string">"float32"</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">assert</span> feed_target_names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span> <span class="token operator">==</span> <span class="token string">'x'</span>
+        results <span class="token operator">=</span> infer_exe<span class="token punctuation">.</span>run<span class="token punctuation">(</span>
+            inference_program<span class="token punctuation">,</span>
+            feed<span class="token operator">=</span><span class="token punctuation">{</span>feed_target_names<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">:</span> numpy<span class="token punctuation">.</span>array<span class="token punctuation">(</span>infer_feat<span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token punctuation">,</span>
+            fetch_list<span class="token operator">=</span>fetch_targets<span class="token punctuation">)</span>
+
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"infer results: (House Price)"</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> idx<span class="token punctuation">,</span> val <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d: %.2f"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>idx<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"\nground truth:"</span><span class="token punctuation">)</span>
+        <span class="token keyword">for</span> idx<span class="token punctuation">,</span> val <span class="token keyword">in</span> enumerate<span class="token punctuation">(</span>infer_label<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"%d: %.2f"</span> <span class="token operator">%</span> <span class="token punctuation">(</span>idx<span class="token punctuation">,</span> val<span class="token punctuation">)</span><span class="token punctuation">)</span>
+
+        save_result<span class="token punctuation">(</span>results<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">,</span> infer_label<span class="token punctuation">)</span>
+
+
+<span class="token keyword">if</span> __name__ <span class="token operator">==</span> <span class="token string">'__main__'</span><span class="token punctuation">:</span>
+    args <span class="token operator">=</span> parse_args<span class="token punctuation">(</span><span class="token punctuation">)</span>
+    main<span class="token punctuation">(</span><span class="token punctuation">)</span></code></pre>
+<p>打印台：</p>
+<pre><code>PS D:\website\unfinished\humanAnalysis&gt; cd book
+PS D:\website\unfinished\humanAnalysis\book&gt; cd 01.fit_a_line
+PS D:\website\unfinished\humanAnalysis\book\01.fit_a_line&gt; python train.py
+Train cost, Step 0, Cost 606.860962
+Test cost, Step 0, Cost 266.116404
+Train cost, Step 10, Cost 664.514526
+Train cost, Step 20, Cost 906.742920
+Train cost, Step 30, Cost 414.152252
+Train cost, Step 40, Cost 727.090942
+Train cost, Step 50, Cost 734.159058
+Train cost, Step 60, Cost 713.471985
+Train cost, Step 70, Cost 403.080078
+Train cost, Step 80, Cost 532.847351
+Train cost, Step 90, Cost 452.942444
+Train cost, Step 100, Cost 564.825867
+Test cost, Step 100, Cost 200.690659
+Train cost, Step 110, Cost 372.106171
+Train cost, Step 120, Cost 240.681793
+Train cost, Step 130, Cost 386.729340
+Train cost, Step 140, Cost 436.183044
+Train cost, Step 150, Cost 409.165649
+Train cost, Step 160, Cost 251.743408
+Train cost, Step 170, Cost 363.190094
+Train cost, Step 180, Cost 290.876343
+Train cost, Step 190, Cost 238.674271
+Train cost, Step 200, Cost 480.360413
+Test cost, Step 200, Cost 141.201913
+Train cost, Step 210, Cost 251.260590
+Train cost, Step 220, Cost 443.875580
+Train cost, Step 230, Cost 522.696472
+Train cost, Step 240, Cost 273.254150
+Train cost, Step 250, Cost 328.410706
+Train cost, Step 260, Cost 165.616699
+Train cost, Step 270, Cost 341.732849
+Train cost, Step 280, Cost 460.836182
+Train cost, Step 290, Cost 377.708008
+Train cost, Step 300, Cost 155.938263
+Test cost, Step 300, Cost 84.771562
+Train cost, Step 310, Cost 195.260956
+Train cost, Step 320, Cost 230.515289
+Train cost, Step 330, Cost 376.748383
+Train cost, Step 340, Cost 55.352600
+Train cost, Step 350, Cost 245.483429
+Train cost, Step 360, Cost 195.628326
+Train cost, Step 370, Cost 128.272705
+Train cost, Step 380, Cost 192.467194
+Train cost, Step 390, Cost 200.950806
+Train cost, Step 400, Cost 143.267120
+Test cost, Step 400, Cost 58.741480
+Train cost, Step 410, Cost 167.990997
+Train cost, Step 420, Cost 171.704010
+Train cost, Step 430, Cost 227.541840
+Train cost, Step 440, Cost 53.857071
+Train cost, Step 450, Cost 75.881340
+Train cost, Step 460, Cost 87.268341
+Train cost, Step 470, Cost 122.918228
+Train cost, Step 480, Cost 186.866608
+Train cost, Step 490, Cost 39.969734
+Train cost, Step 500, Cost 49.848217
+Test cost, Step 500, Cost 38.981829
+Train cost, Step 510, Cost 81.657272
+Train cost, Step 520, Cost 121.219955
+Train cost, Step 530, Cost 104.549416
+Train cost, Step 540, Cost 213.810944
+Train cost, Step 550, Cost 91.921463
+Train cost, Step 560, Cost 171.849442
+Train cost, Step 570, Cost 31.270111
+Train cost, Step 580, Cost 122.207275
+Train cost, Step 590, Cost 259.138092
+Train cost, Step 600, Cost 51.683052
+Test cost, Step 600, Cost 32.428572
+Train cost, Step 610, Cost 49.803291
+Train cost, Step 620, Cost 90.105896
+Train cost, Step 630, Cost 44.049843
+Train cost, Step 640, Cost 120.347305
+Train cost, Step 650, Cost 84.765167
+Train cost, Step 660, Cost 136.029739
+Train cost, Step 670, Cost 95.014450
+Train cost, Step 680, Cost 117.310165
+Train cost, Step 690, Cost 72.442276
+Train cost, Step 700, Cost 87.194832
+Test cost, Step 700, Cost 29.473431
+Train cost, Step 710, Cost 134.217560
+Train cost, Step 720, Cost 38.803719
+Train cost, Step 730, Cost 111.499146
+Train cost, Step 740, Cost 98.186722
+Train cost, Step 750, Cost 62.987083
+Train cost, Step 760, Cost 77.201309
+Train cost, Step 770, Cost 174.931030
+Train cost, Step 780, Cost 54.251362
+Train cost, Step 790, Cost 87.748695
+Train cost, Step 800, Cost 130.932770
+Test cost, Step 800, Cost 24.394218
+Train cost, Step 810, Cost 18.288671
+Train cost, Step 820, Cost 115.980186
+Train cost, Step 830, Cost 102.966736
+Train cost, Step 840, Cost 63.273945
+Train cost, Step 850, Cost 58.921326
+Train cost, Step 860, Cost 28.566729
+Train cost, Step 870, Cost 88.436607
+Train cost, Step 880, Cost 100.523506
+Train cost, Step 890, Cost 8.258808
+Train cost, Step 900, Cost 102.938477
+Test cost, Step 900, Cost 20.491593
+Train cost, Step 910, Cost 95.012352
+Train cost, Step 920, Cost 140.228104
+Train cost, Step 930, Cost 34.042320
+Train cost, Step 940, Cost 75.470451
+Train cost, Step 950, Cost 141.397659
+Train cost, Step 960, Cost 40.701298
+Train cost, Step 970, Cost 154.806976
+Train cost, Step 980, Cost 86.935760
+Train cost, Step 990, Cost 73.222473
+Train cost, Step 1000, Cost 68.322090
+Test cost, Step 1000, Cost 20.505726
+Train cost, Step 1010, Cost 127.669334
+Train cost, Step 1020, Cost 138.170425
+Train cost, Step 1030, Cost 68.965355
+Train cost, Step 1040, Cost 50.779037
+Train cost, Step 1050, Cost 84.939835
+Train cost, Step 1060, Cost 69.356667
+Train cost, Step 1070, Cost 8.737133
+Train cost, Step 1080, Cost 46.237396
+Train cost, Step 1090, Cost 46.242882
+Train cost, Step 1100, Cost 96.202805
+Test cost, Step 1100, Cost 21.630716
+Train cost, Step 1110, Cost 25.053020
+Train cost, Step 1120, Cost 26.320166
+Train cost, Step 1130, Cost 103.976952
+Train cost, Step 1140, Cost 101.335129
+Train cost, Step 1150, Cost 23.508747
+Train cost, Step 1160, Cost 15.127220
+Train cost, Step 1170, Cost 38.013943
+Train cost, Step 1180, Cost 72.227493
+Train cost, Step 1190, Cost 39.595856
+Train cost, Step 1200, Cost 45.513435
+Test cost, Step 1200, Cost 16.698677
+Train cost, Step 1210, Cost 34.373497
+Train cost, Step 1220, Cost 37.893467
+Train cost, Step 1230, Cost 25.988667
+Train cost, Step 1240, Cost 30.401096
+Train cost, Step 1250, Cost 48.092617
+Train cost, Step 1260, Cost 44.803513
+Train cost, Step 1270, Cost 28.291538
+Train cost, Step 1280, Cost 25.238585
+Train cost, Step 1290, Cost 109.401230
+Train cost, Step 1300, Cost 103.367577
+Test cost, Step 1300, Cost 18.368759
+Train cost, Step 1310, Cost 119.408676
+Train cost, Step 1320, Cost 76.509506
+Train cost, Step 1330, Cost 92.364120
+Train cost, Step 1340, Cost 73.727493
+Train cost, Step 1350, Cost 48.289833
+Train cost, Step 1360, Cost 105.238892
+Train cost, Step 1370, Cost 11.796598
+Train cost, Step 1380, Cost 16.043736
+Train cost, Step 1390, Cost 74.244522
+Train cost, Step 1400, Cost 37.875702
+Test cost, Step 1400, Cost 15.383504
+Train cost, Step 1410, Cost 31.219162
+Train cost, Step 1420, Cost 15.730331
+Train cost, Step 1430, Cost 53.388100
+Train cost, Step 1440, Cost 64.338486
+Train cost, Step 1450, Cost 47.804264
+Train cost, Step 1460, Cost 142.046844
+Train cost, Step 1470, Cost 40.241798
+Train cost, Step 1480, Cost 66.582336
+Train cost, Step 1490, Cost 139.949478
+Train cost, Step 1500, Cost 94.006378
+Test cost, Step 1500, Cost 17.149232
+Train cost, Step 1510, Cost 64.246689
+Train cost, Step 1520, Cost 53.102608
+Train cost, Step 1530, Cost 33.831787
+Train cost, Step 1540, Cost 13.093783
+Train cost, Step 1550, Cost 36.040916
+Train cost, Step 1560, Cost 63.577492
+Train cost, Step 1570, Cost 37.999374
+Train cost, Step 1580, Cost 81.703178
+Train cost, Step 1590, Cost 50.596218
+Train cost, Step 1600, Cost 108.769798
+Test cost, Step 1600, Cost 15.121309
+Train cost, Step 1610, Cost 43.200218
+Train cost, Step 1620, Cost 100.872978
+Train cost, Step 1630, Cost 74.871918
+Train cost, Step 1640, Cost 85.549095
+Train cost, Step 1650, Cost 28.516750
+Train cost, Step 1660, Cost 32.314495
+Train cost, Step 1670, Cost 98.764404
+Train cost, Step 1680, Cost 138.100021
+Train cost, Step 1690, Cost 89.205482
+Train cost, Step 1700, Cost 188.233978
+Test cost, Step 1700, Cost 17.644192
+Train cost, Step 1710, Cost 181.968674
+Train cost, Step 1720, Cost 96.271439
+Train cost, Step 1730, Cost 86.085785
+Train cost, Step 1740, Cost 22.178726
+Train cost, Step 1750, Cost 66.519218
+Train cost, Step 1760, Cost 56.182178
+Train cost, Step 1770, Cost 80.658646
+Train cost, Step 1780, Cost 106.331642
+Train cost, Step 1790, Cost 46.645775
+Train cost, Step 1800, Cost 59.237659
+Test cost, Step 1800, Cost 16.460978
+Train cost, Step 1810, Cost 54.295788
+Train cost, Step 1820, Cost 39.466507
+Train cost, Step 1830, Cost 143.297058
+Train cost, Step 1840, Cost 34.587658
+Train cost, Step 1850, Cost 66.235031
+Train cost, Step 1860, Cost 59.306446
+Train cost, Step 1870, Cost 21.053343
+Train cost, Step 1880, Cost 59.348877
+Train cost, Step 1890, Cost 30.416229
+Train cost, Step 1900, Cost 74.652962
+Test cost, Step 1900, Cost 15.702039
+Train cost, Step 1910, Cost 27.829725
+Train cost, Step 1920, Cost 50.862949
+Train cost, Step 1930, Cost 108.574806
+Train cost, Step 1940, Cost 53.339409
+Train cost, Step 1950, Cost 22.503649
+Train cost, Step 1960, Cost 87.170258
+Train cost, Step 1970, Cost 55.865856
+Train cost, Step 1980, Cost 50.833260
+Train cost, Step 1990, Cost 45.053703
+Train cost, Step 2000, Cost 58.910870
+Test cost, Step 2000, Cost 14.707315
+Train cost, Step 2010, Cost 69.761459
+Train cost, Step 2020, Cost 76.524017
+Train cost, Step 2030, Cost 32.103958
+Train cost, Step 2040, Cost 129.950775
+Train cost, Step 2050, Cost 34.064095
+Train cost, Step 2060, Cost 23.185333
+Train cost, Step 2070, Cost 39.293571
+Train cost, Step 2080, Cost 58.661816
+Train cost, Step 2090, Cost 74.760284</code></pre><p>获得的数据：</p>
+<pre><code>infer results: (House Price)
+0: 13.86
+1: 14.28
+2: 13.88
+3: 16.05
+4: 14.52
+5: 15.31
+6: 14.63
+7: 14.34
+8: 11.43
+9: 14.27
+
+ground truth:
+0: 8.50
+1: 5.00
+2: 11.90
+3: 27.90
+4: 17.20
+5: 27.50
+6: 15.00
+7: 17.20
+8: 17.90
+9: 16.30
+PS D:\website\unfinished\humanAnalysis\book\01.fit_a_line&gt;</code></pre><p>生成的图片：</p>
+<p><img src="D:%5Cwebsite%5Cbiji%5Cmedia%5C000001.jpg" alt="img"></p>
+
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://shirleydora.github.io/flower02" rel="external nofollow noreferrer">Shirley</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://shirleydora.github.io/flower02/flower02/posts/30060101.html">https://shirleydora.github.io/flower02/flower02/posts/30060101.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="https://shirleydora.github.io/flower02" target="_blank">Shirley</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/flower02/tags/%E7%AE%97%E6%B3%95/">
+                                    <span class="chip bg-color">算法</span>
+                                </a>
+                            
+                                <a href="/flower02/tags/paddlepaddle/">
+                                    <span class="chip bg-color">paddlepaddle</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/flower02/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/flower02/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="/flower02/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="/flower02/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+        <style>
+    .valine-card {
+        margin: 1.5rem auto;
+    }
+
+    .valine-card .card-content {
+        padding: 20px 20px 5px 20px;
+    }
+
+    #vcomments textarea {
+        box-sizing: border-box;
+        background: url("/flower02/medias/comment_bg.png") 100% 100% no-repeat;
+    }
+
+    #vcomments p {
+        margin: 2px 2px 10px;
+        font-size: 1.05rem;
+        line-height: 1.78rem;
+    }
+
+    #vcomments blockquote p {
+        text-indent: 0.2rem;
+    }
+
+    #vcomments a {
+        padding: 0 2px;
+        color: #4cbf30;
+        font-weight: 500;
+        text-decoration: none;
+    }
+
+    #vcomments img {
+        max-width: 100%;
+        height: auto;
+        cursor: pointer;
+    }
+
+    #vcomments ol li {
+        list-style-type: decimal;
+    }
+
+    #vcomments ol,
+    ul {
+        display: block;
+        padding-left: 2em;
+        word-spacing: 0.05rem;
+    }
+
+    #vcomments ul li,
+    ol li {
+        display: list-item;
+        line-height: 1.8rem;
+        font-size: 1rem;
+    }
+
+    #vcomments ul li {
+        list-style-type: disc;
+    }
+
+    #vcomments ul ul li {
+        list-style-type: circle;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    #vcomments table, th, td {
+        border: 0;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments h1 {
+        font-size: 1.85rem;
+        font-weight: bold;
+        line-height: 2.2rem;
+    }
+
+    #vcomments h2 {
+        font-size: 1.65rem;
+        font-weight: bold;
+        line-height: 1.9rem;
+    }
+
+    #vcomments h3 {
+        font-size: 1.45rem;
+        font-weight: bold;
+        line-height: 1.7rem;
+    }
+
+    #vcomments h4 {
+        font-size: 1.25rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    #vcomments h5 {
+        font-size: 1.1rem;
+        font-weight: bold;
+        line-height: 1.4rem;
+    }
+
+    #vcomments h6 {
+        font-size: 1rem;
+        line-height: 1.3rem;
+    }
+
+    #vcomments p {
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    #vcomments hr {
+        margin: 12px 0;
+        border: 0;
+        border-top: 1px solid #ccc;
+    }
+
+    #vcomments blockquote {
+        margin: 15px 0;
+        border-left: 5px solid #42b983;
+        padding: 1rem 0.8rem 0.3rem 0.8rem;
+        color: #666;
+        background-color: rgba(66, 185, 131, .1);
+    }
+
+    #vcomments pre {
+        font-family: monospace, monospace;
+        padding: 1.2em;
+        margin: .5em 0;
+        background: #272822;
+        overflow: auto;
+        border-radius: 0.3em;
+        tab-size: 4;
+    }
+
+    #vcomments code {
+        font-family: monospace, monospace;
+        padding: 1px 3px;
+        font-size: 0.92rem;
+        color: #e96900;
+        background-color: #f8f8f8;
+        border-radius: 2px;
+    }
+
+    #vcomments pre code {
+        font-family: monospace, monospace;
+        padding: 0;
+        color: #e8eaf6;
+        background-color: #272822;
+    }
+
+    #vcomments pre[class*="language-"] {
+        padding: 1.2em;
+        margin: .5em 0;
+    }
+
+    #vcomments code[class*="language-"],
+    pre[class*="language-"] {
+        color: #e8eaf6;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+
+    #vcomments b,
+    strong {
+        font-weight: bold;
+    }
+
+    #vcomments dfn {
+        font-style: italic;
+    }
+
+    #vcomments small {
+        font-size: 85%;
+    }
+
+    #vcomments cite {
+        font-style: normal;
+    }
+
+    #vcomments mark {
+        background-color: #fcf8e3;
+        padding: .2em;
+    }
+
+    #vcomments table, th, td {
+        padding: 12px 13px;
+        border: 1px solid #dfe2e5;
+    }
+
+    table tr:nth-child(2n), thead {
+        background-color: #fafafa;
+    }
+
+    #vcomments table th {
+        background-color: #f2f2f2;
+        min-width: 80px;
+    }
+
+    #vcomments table td {
+        min-width: 80px;
+    }
+
+    #vcomments [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
+        position: inherit;
+        margin-left: -1.3rem;
+        margin-right: 0.4rem;
+        margin-top: -1px;
+        vertical-align: middle;
+        left: unset;
+        visibility: visible;
+    }
+</style>
+
+<div class="card valine-card" data-aos="fade-up">
+    <div class="comment_headling" style="font-size: 20px; font-weight: 700; position: relative; padding-left: 20px; top: 15px; padding-bottom: 5px;">
+        <i class="fas fa-comments fa-fw" aria-hidden="true"></i>
+        <span>评论</span>
+    </div>
+    <div id="vcomments" class="card-content" style="display: grid">
+    </div>
+</div>
+
+<script src="/flower02/libs/valine/av-min.js"></script>
+<script src="/flower02/libs/valine/Valine.min.js"></script>
+<script>
+    new Valine({
+        el: '#vcomments',
+        appId: 'a9wyMpC7jJcFeu6HsmWzlDfI-9Nh9j0Va',
+        appKey: 'wyThviLImFlPv4K7NeMBpVqK',
+        notify: 'false' === 'true',
+        verify: 'false' === 'true',
+        visitor: 'true' === 'true',
+        avatar: 'mm',
+        pageSize: '10',
+        lang: 'zh-cn',
+        placeholder: 'Write a Comment'
+    });
+</script>
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/flower02/posts/30030101.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/flower02/medias/featureimages/15.jpg" class="responsive-img" alt="java-web">
+                        
+                        <span class="card-title">java-web</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            一、第一天1.创建数据库create database
+use javaweb;
+create table student(
+    id int,
+    name varchar(20),
+    phone varchar(20),
+
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2019-08-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/" class="post-category">
+                                    知识分享
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/flower02/tags/%E5%90%8E%E7%AB%AF/">
+                        <span class="chip bg-color">后端</span>
+                    </a>
+                    
+                    <a href="/flower02/tags/java/">
+                        <span class="chip bg-color">java</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/flower02/posts/100003.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/flower02/medias/featureimages/18.jpg" class="responsive-img" alt="致敬新时代的奋斗者">
+                        
+                        <span class="card-title">致敬新时代的奋斗者</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            岁月如诗，句句悠扬。普天之大，自识君，则为之君。蓬生麻中，不扶而直，白沙在涅，与之俱黑。书上说人会长大三次。第一次是在发现自己不是世界中心的时候。第二次是在发现即使再怎么努力，终究还是有些事令人爱莫能助的时候。第三次是在明知道有些事可能会爱莫能助，但还是会尽力争取的时候。“闹市心不静，幽处见真情。”“我有一壶酒，足以慰风尘。白衣倾故里，杯盏奉为心。”“世界那么大，我想去看看”。
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2019-05-27
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/flower02/categories/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/" class="post-category">
+                                    日常随笔
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/flower02/tags/%E6%97%A5%E5%B8%B8%E9%9A%8F%E7%AC%94/">
+                        <span class="chip bg-color">日常随笔</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+<script>
+    $('#articleContent').on('copy', function (e) {
+        // IE8 or earlier browser is 'undefined'
+        if (typeof window.getSelection === 'undefined') return;
+
+        var selection = window.getSelection();
+        // if the selection is short let's not annoy our users.
+        if (('' + selection).length < Number.parseInt('120')) {
+            return;
+        }
+
+        // create a div outside of the visible area and fill it with the selected text.
+        var bodyElement = document.getElementsByTagName('body')[0];
+        var newdiv = document.createElement('div');
+        newdiv.style.position = 'absolute';
+        newdiv.style.left = '-99999px';
+        bodyElement.appendChild(newdiv);
+        newdiv.appendChild(selection.getRangeAt(0).cloneContents());
+
+        // we need a <pre> tag workaround.
+        // otherwise the text inside "pre" loses all the line breaks!
+        if (selection.getRangeAt(0).commonAncestorContainer.nodeName === 'PRE') {
+            newdiv.innerHTML = "<pre>" + newdiv.innerHTML + "</pre>";
+        }
+
+        var url = document.location.href;
+        newdiv.innerHTML += '<br />'
+            + '来源: Flower<br />'
+            + '文章作者: Shirley<br />'
+            + '文章链接: <a href="' + url + '">' + url + '</a><br />'
+            + '本文章著作权归作者所有，任何形式的转载都请注明出处。';
+
+        selection.selectAllChildren(newdiv);
+        window.setTimeout(function () {bodyElement.removeChild(newdiv);}, 200);
+    });
+</script>
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/flower02/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/flower02/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/flower02/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/flower02/libs/codeBlock/codeShrink.js"></script>
+
+
+<!-- 代码块折行 -->
+
+<style type="text/css">
+code[class*="language-"], pre[class*="language-"] { white-space: pre !important; }
+</style>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/flower02/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/flower02/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="tencent"
+                   type="playlist"
+                   id="7523082188"
+                   fixed='true'
+                   autoplay='true'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/flower02/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            <span id="year">2020</span>
+            <a href="https://shirleydora.github.io/flower02" target="_blank">Shirley</a>
+            |&nbsp;Powered by&nbsp;<a href="https://github.com/ShirleyDora" target="_blank">Shirley</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/ShirleyDora/flower" target="_blank">Shirley's blog</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">325.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "4";
+                    var startDate = "14";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/ShirleyDora" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:565914036@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=565914036" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 565914036" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="/flower02/atom.xml" class="tooltipped" target="_blank" data-tooltip="RSS 订阅" data-position="top" data-delay="50">
+        <i class="fas fa-rss"></i>
+    </a>
+
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script src="/flower02/js/search.js"></script>
+<script type="text/javascript">
+$(function () {
+    searchFunc("/flower02/search.xml", 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/flower02/libs/materialize/materialize.min.js"></script>
+    <script src="/flower02/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/flower02/libs/aos/aos.js"></script>
+    <script src="/flower02/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/flower02/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/flower02/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/flower02/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/flower02/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+    <script src="/flower02/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+<script src="/flower02/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"log":false,"pluginJsPath":"lib/","pluginModelPath":"assets/","pluginRootPath":"live2dw/","tagMode":false});</script></body>
+
+</html>
