@@ -45,45 +45,6 @@
   </entry>
   
   <entry>
-    <title>uniapp视频点播仿B站</title>
-    <link href="https://shirleydora.github.io/flower02/posts/200801.html"/>
-    <id>https://shirleydora.github.io/flower02/posts/200801.html</id>
-    <published>2021-01-15T09:58:00.000Z</published>
-    <updated>2021-01-15T09:58:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1-前端开发（uniapp框架）&quot;&gt;&lt;a href=&quot;#1-前端开发（uniapp框架）&quot; class=&quot;headerlink&quot; title=&quot;*1.前端开发（uniapp框架）&quot;&gt;&lt;/a&gt;*1.前端开发（uniapp框架）&lt;/h1&gt;&lt;h1
-        
-      
-    
-    </summary>
-    
-    
-      <category term="项目分享" scheme="https://shirleydora.github.io/flower02/categories/%E9%A1%B9%E7%9B%AE%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="node.js" scheme="https://shirleydora.github.io/flower02/tags/node-js/"/>
-    
-      <category term="uniapp" scheme="https://shirleydora.github.io/flower02/tags/uniapp/"/>
-    
-      <category term="视频点播APP" scheme="https://shirleydora.github.io/flower02/tags/%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%ADAPP/"/>
-    
-      <category term="egg" scheme="https://shirleydora.github.io/flower02/tags/egg/"/>
-    
-      <category term="redis" scheme="https://shirleydora.github.io/flower02/tags/redis/"/>
-    
-      <category term="jwt" scheme="https://shirleydora.github.io/flower02/tags/jwt/"/>
-    
-      <category term="crypto" scheme="https://shirleydora.github.io/flower02/tags/crypto/"/>
-    
-  </entry>
-  
-  <entry>
     <title>bug2:vue监听数组及对象变化并更新视图</title>
     <link href="https://shirleydora.github.io/flower02/posts/30020304.html"/>
     <id>https://shirleydora.github.io/flower02/posts/30020304.html</id>
@@ -617,6 +578,35 @@ node
       <category term="前端" scheme="https://shirleydora.github.io/flower02/tags/%E5%89%8D%E7%AB%AF/"/>
     
       <category term="react" scheme="https://shirleydora.github.io/flower02/tags/react/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我的angular学习笔记</title>
+    <link href="https://shirleydora.github.io/flower02/posts/30020401.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/30020401.html</id>
+    <published>2020-10-23T03:23:00.000Z</published>
+    <updated>2020-10-23T03:23:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-Angular&quot;&gt;&lt;a href=&quot;#1-Angular&quot; class=&quot;headerlink&quot;
+        
+      
+    
+    </summary>
+    
+    
+      <category term="知识分享" scheme="https://shirleydora.github.io/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="angular" scheme="https://shirleydora.github.io/flower02/tags/angular/"/>
+    
+      <category term="前端" scheme="https://shirleydora.github.io/flower02/tags/%E5%89%8D%E7%AB%AF/"/>
     
   </entry>
   

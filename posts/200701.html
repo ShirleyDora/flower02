@@ -498,14 +498,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    32.3k
+                    32.2k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    159 分
+                    158 分
                 </div>
                 
 
@@ -888,13 +888,7 @@ css3选择器，同级下有其他组件时，最好把：nth-child(n)换成nth-
 <ol>
 <li><p>为兼容各端，事件需使用 <code>v-on</code> 或 <code>@</code> 的方式绑定，请勿使用小程序端的<code>bind</code> 和 <code>catch</code> 进行事件绑定。</p>
 </li>
-<li><p>事件修饰符</p>
-<p><code>.stop</code>：各平台均支持， 使用时会阻止事件冒泡，在非 H5 端同时也会阻止事件的默认行为</p>
-<p><code>.prevent</code> 仅在 H5 平台支持</p>
-<p><code>.self</code>：仅在 H5 平台支持</p>
-<p><code>.once</code>：仅在 H5 平台支持</p>
-<p><code>.capture</code>：仅在 H5 平台支持</p>
-<p><code>.passive</code>：仅在 H5 平台支持</p>
+<li><p>事件修饰符<br><code>.stop</code>：各平台均支持， 使用时会阻止事件冒泡，在非 H5 端同时也会阻止事件的默认行为<br><code>.prevent</code> 仅在 H5 平台支持<br><code>.self</code>：仅在 H5 平台支持<br><code>.once</code>：仅在 H5 平台支持<br><code>.capture</code>：仅在 H5 平台支持<br><code>.passive</code>：仅在 H5 平台支持</p>
 </li>
 <li><p>若需要禁止蒙版下的页面滚动，可使用</p>
 <pre><code>@touchmove.stop.prevent="moveHandle"</code></pre><p>，moveHandle 可以用来处理 touchmove 的事件，也可以是一个空函数。</p>
@@ -10923,8 +10917,7 @@ Route<span class="token punctuation">:</span><span class="token punctuation">:</
     Route<span class="token punctuation">:</span><span class="token punctuation">:</span><span class="token function">post</span><span class="token punctuation">(</span><span class="token string">'chat/bind'</span><span class="token punctuation">,</span><span class="token string">'api/:v1.Chat/bind'</span><span class="token punctuation">)</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token operator">-</span><span class="token operator">></span><span class="token function">middleware</span><span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">'ApiUserAuth'</span><span class="token punctuation">,</span><span class="token string">'ApiUserBindPhone'</span><span class="token punctuation">,</span><span class="token string">'ApiUserStatus'</span><span class="token punctuation">]</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
 <h2 id="9-配置wss和隐藏端口号"><a href="#9-配置wss和隐藏端口号" class="headerlink" title="9.配置wss和隐藏端口号"></a>9.配置wss和隐藏端口号</h2><h3 id="第一步："><a href="#第一步：" class="headerlink" title="第一步："></a>第一步：</h3><p>必须已经配置了https，具体参考章节50（后端api源码部署）中的《部署https》那节课</p>
-<h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><p>具体操作看视频教程：章节50（后端api源码部署）中的《配置wss和隐藏端口号》，注意：不要直接复制</p>
-<pre><code>server
+<h3 id="第二步："><a href="#第二步：" class="headerlink" title="第二步："></a>第二步：</h3><pre><code>server
 {
     listen 80;
     listen 443 ssl http2;
@@ -11109,9 +11102,9 @@ Route<span class="token punctuation">:</span><span class="token punctuation">:</
     <span class="token string">'alipay'</span><span class="token operator">=</span><span class="token operator">></span><span class="token punctuation">[</span>
         <span class="token string">'appid'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'2019031963566521'</span><span class="token punctuation">,</span>
         <span class="token comment" spellcheck="true">// 私钥</span>
- <span class="token string">'PrivateKey'</span><span class="token operator">=</span><span class="token operator">></span>'MIIEKCAQEA7SAtBYvoWFid1ZRiEyvzjDY7MUBNf8T6AQnFtpYRegE6RfmxViD9Vtmwe<span class="token comment" spellcheck="true">//tEF2NquM6sJABefumswqxqM24aE2iFsr2ebXYzL/RGeM6pKGCqFT/Ori1+BUzQCZqVEGzVmwRbg1vNMwXPTTsgudeCtnSdYccpyQv4oTt3sVCz/MxUINFCtOweQFzolbD2oIExPK7lfPc4msEdg49c8YCrjV+PnFQ5VKmIb786dOj9Io1y6kvp3IHxOIs3hgknXmXgP+zPWB0G8v/jRVad/iCgoDEPyZrCO+/cF0BcFx4yutUVENqJI9qNyMQyu34Vmlg5moUoHr2NmzLhQH9rUtBZQIDAQABAoIBAQCPvmGMazN92rpTLpAFby9EX9uiD4jrW0zyNCpWdMJDY1sf8C1AON9aNrx1br8WnJ+0Z+q7/Y/nklWLU4A/A/Y1xFnt1ztyrHmwJNdtCgISqpW51UyjHDWzHabjzGXIjctZKEmonRw8tTuhLuPwtrCbg0/BTxZfe+BLQKmx0YKe63LPXXqLoAEIyR+wuuHGvDZmFEBXpIznEXBdsk6hJlQPcKX80wExUCbKXKteHV4aNuklTGPnNezl938yjTJVfys7fqwg0mISrgu3i8rVz//stbEe4JLyOlHov9CJZweJon8is0eOJuKr+TyafIpbd0O+7i/pBq687gLX99UKjfxBAoGBAPivu+J8Lgq/HQ2M7kMpSFNkWcrBNZh1+2O00EHq70+9QzMFVEZ8QO1o885V2i9Hc+cIAgiah7tOfUxMUa6FRisoxMtLaR9DQfDhKos7ySl7xUM9W3WH8nduPMK86Wq8g+jvfRD9RRf0JqISyHR6rKyRr5ycwQs+qYsG8AC2WueHAoGBAPQZZ78VVQs5XN6LmNdJamAEDBAzQWHwUCJbxf8e7AHhJENM9Dm0vJxnhxkqpuVre4gCgklBviUatXgQM034igX/6Wg0yQU4HPyXw52iFQUfiynbbaQJNBq6JnlowWfaYFokbJWPveRwyhBbmx9If5IPvcaH9mNd2o3iAnBsJTKzAoGAJHJ1AeObR93snyDJhrRVMkuh0VJxzW91MY69evu4qSIe6CpeyJnLVkAsg1AX0xgQx4pn6eTkAbKmMHl6+y3zM74c4YKi3H8Z+fi2KIPRnq/SIGGsttP+2Dwi0ZOoTglk982pscS8zJ7uzpAcKt4T0pLjfvuGW2SKqqKQqDoRpp8CgYB2Ihlwg71tuiw00/B7OF+P6kWATZ317RyLFEklZ+ymGDS5kXOcvdiOBRh/2IF/BF57e2NcWsHQKTXrzkNWF9OMhcaLFQi4SujUYgpcroVnvlVWQ4izW3To/nACT+1R+oCo/3nBhBhNhzxzYDIZmLeMk6uvejuG6XQNOHUfvWbfOwKBgQCANKL+RBWM4NGkiJaQ9CMKYpKMU8O878DuKgaDjw8eE6bVreoK5rpGPYeVsxt89ttIGg1MB02fLDygQtVo4PhY9D+TIuchQW9axZ1N1rQDnbeIqwlpNQBL0TnPtnDmBbE25033BD5JCS/3miTZ89gMcnFCLhUk587bVKM4tO1CRg==',</span>
+ <span class="token string">'PrivateKey'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">''</span><span class="token punctuation">,</span>
         <span class="token comment" spellcheck="true">// 公钥</span>
-        <span class="token string">'PublicKey'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">'MINBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAt/RArwe6fRo8PljuUKUfqhRo8mJWnrNu0s83sOxRAOoR0wHTIz6N/83fpM0nP+NPZ4yNLCfyV8DUeIoudpvblSc1K7rpS5XACABp0MRzds8hG0quhUMdKmS42wosynH/GmhtOvQPYshMBYyBQAx3r5+F8XKK5RqAOfWjjSSr9NM6ipfyoiGEJVo6UXqgJRUjSECdiZfMskkv4QnxPF2Amw5Ns9GOCNABq+yAnE2ibnR8PjQwjmHWYih4pJ3RwcNWP2+vucWbbKytxsmDdbHWWEQHtH/Q22DHFKi/+hekZMB3x9gvCCy5lTMvGx1jHtIzFsfZwGXL4H8Ipgu51/anbQIDAQAB'</span><span class="token punctuation">,</span>
+        <span class="token string">'PublicKey'</span><span class="token operator">=</span><span class="token operator">></span><span class="token string">''</span><span class="token punctuation">,</span>
     <span class="token punctuation">]</span>
 <span class="token punctuation">]</span><span class="token punctuation">;</span></code></pre>
 <p>路由层：route\route.php</p>
@@ -12052,7 +12045,7 @@ code[class*="language-"], pre[class*="language-"] { white-space: pre !important;
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">325.8k</span>&nbsp;字
+                class="white-color">304.2k</span>&nbsp;字
             
             
             
