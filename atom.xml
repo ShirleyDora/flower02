@@ -29,7 +29,7 @@
       
         
         
-          &lt;p&gt;本文章只讲AI的概念，基于我的面试和做的项目做一个梳理：&lt;/p&gt;
+          &lt;p&gt;基于我的面试和做的项目做一个梳理：&lt;/p&gt;
 &lt;h1 id=&quot;一、基础概念：&quot;&gt;&lt;a href=&quot;#一、基础概念：&quot; class=&quot;headerlink&quot;
         
       
@@ -41,6 +41,106 @@
     
     
       <category term="AI" scheme="https://shirleydora.github.io/flower02/tags/AI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大模型网关详解：多模型路由、fallback、限流与成本控制</title>
+    <link href="https://shirleydora.github.io/flower02/posts/30090402.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/30090402.html</id>
+    <published>2026-06-14T04:59:19.000Z</published>
+    <updated>2026-06-14T04:59:19.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;面试官看了一眼我的 AI 项目架构图，突然停住了。&lt;/p&gt;
+&lt;p&gt;“你这个 Agent，每次都是调用旗舰模型？”&lt;/p&gt;
+&lt;p&gt;我点点头：“对啊，肯定得用最强的啊，效果好。”&lt;/p&gt;
+&lt;p&gt;他沉默了两秒，然后开口：“那意图分类、标题生成、JSON 修复、简单摘要，也全走
+        
+      
+    
+    </summary>
+    
+    
+      <category term="知识分享" scheme="https://shirleydora.github.io/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="AI" scheme="https://shirleydora.github.io/flower02/tags/AI/"/>
+    
+      <category term="AI系统设计" scheme="https://shirleydora.github.io/flower02/tags/AI%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI应用系统设计</title>
+    <link href="https://shirleydora.github.io/flower02/posts/30090401.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/30090401.html</id>
+    <published>2026-06-14T02:21:00.000Z</published>
+    <updated>2026-06-14T02:21:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;p&gt;很多团队做 AI 应用时，第一天都很兴奋：写一个 Prompt，调一下大模型
+        
+      
+    
+    </summary>
+    
+    
+      <category term="知识分享" scheme="https://shirleydora.github.io/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="AI" scheme="https://shirleydora.github.io/flower02/tags/AI/"/>
+    
+      <category term="AI系统设计" scheme="https://shirleydora.github.io/flower02/tags/AI%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>uniapp视频点播仿B站</title>
+    <link href="https://shirleydora.github.io/flower02/posts/200801.html"/>
+    <id>https://shirleydora.github.io/flower02/posts/200801.html</id>
+    <published>2021-01-15T09:58:00.000Z</published>
+    <updated>2021-01-15T09:58:00.000Z</updated>
+    
+    <summary type="html">
+    
+      
+      
+        
+        
+          &lt;h1 id=&quot;1-前端开发（uniapp框架）&quot;&gt;&lt;a href=&quot;#1-前端开发（uniapp框架）&quot; class=&quot;headerlink&quot; title=&quot;*1.前端开发（uniapp框架）&quot;&gt;&lt;/a&gt;*1.前端开发（uniapp框架）&lt;/h1&gt;&lt;h1
+        
+      
+    
+    </summary>
+    
+    
+      <category term="项目分享" scheme="https://shirleydora.github.io/flower02/categories/%E9%A1%B9%E7%9B%AE%E5%88%86%E4%BA%AB/"/>
+    
+    
+      <category term="node.js" scheme="https://shirleydora.github.io/flower02/tags/node-js/"/>
+    
+      <category term="uniapp" scheme="https://shirleydora.github.io/flower02/tags/uniapp/"/>
+    
+      <category term="视频点播APP" scheme="https://shirleydora.github.io/flower02/tags/%E8%A7%86%E9%A2%91%E7%82%B9%E6%92%ADAPP/"/>
+    
+      <category term="egg" scheme="https://shirleydora.github.io/flower02/tags/egg/"/>
+    
+      <category term="redis" scheme="https://shirleydora.github.io/flower02/tags/redis/"/>
+    
+      <category term="jwt" scheme="https://shirleydora.github.io/flower02/tags/jwt/"/>
+    
+      <category term="crypto" scheme="https://shirleydora.github.io/flower02/tags/crypto/"/>
     
   </entry>
   
@@ -516,95 +616,6 @@ node
     
     
       <category term="vue" scheme="https://shirleydora.github.io/flower02/tags/vue/"/>
-    
-      <category term="前端" scheme="https://shirleydora.github.io/flower02/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的egg学习笔记</title>
-    <link href="https://shirleydora.github.io/flower02/posts/30030201.html"/>
-    <id>https://shirleydora.github.io/flower02/posts/30030201.html</id>
-    <published>2020-12-01T04:22:00.000Z</published>
-    <updated>2020-12-01T04:22:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;安装egg&quot;&gt;&lt;a href=&quot;#安装egg&quot; class=&quot;headerlink&quot; title=&quot;安装egg&quot;&gt;&lt;/a&gt;安装egg&lt;/h1&gt;&lt;p&gt;我们推荐直接使用脚手架，只需几条简单指令，即可快速生成项目（&lt;code&gt;npm
-        
-      
-    
-    </summary>
-    
-    
-      <category term="知识分享" scheme="https://shirleydora.github.io/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="node.js" scheme="https://shirleydora.github.io/flower02/tags/node-js/"/>
-    
-      <category term="后端" scheme="https://shirleydora.github.io/flower02/tags/%E5%90%8E%E7%AB%AF/"/>
-    
-      <category term="egg" scheme="https://shirleydora.github.io/flower02/tags/egg/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的react学习笔记</title>
-    <link href="https://shirleydora.github.io/flower02/posts/30020201.html"/>
-    <id>https://shirleydora.github.io/flower02/posts/30020201.html</id>
-    <published>2020-10-23T04:01:00.000Z</published>
-    <updated>2020-10-23T04:01:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;React学习&quot;&gt;&lt;a href=&quot;#React学习&quot; class=&quot;headerlink&quot; title=&quot;React学习&quot;&gt;&lt;/a&gt;React学习&lt;/h1&gt;&lt;h2 id=&quot;Install&quot;&gt;&lt;a href=&quot;#Install&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="知识分享" scheme="https://shirleydora.github.io/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="前端" scheme="https://shirleydora.github.io/flower02/tags/%E5%89%8D%E7%AB%AF/"/>
-    
-      <category term="react" scheme="https://shirleydora.github.io/flower02/tags/react/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>我的angular学习笔记</title>
-    <link href="https://shirleydora.github.io/flower02/posts/30020401.html"/>
-    <id>https://shirleydora.github.io/flower02/posts/30020401.html</id>
-    <published>2020-10-23T03:23:00.000Z</published>
-    <updated>2020-10-23T03:23:00.000Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;h1 id=&quot;1-Angular&quot;&gt;&lt;a href=&quot;#1-Angular&quot; class=&quot;headerlink&quot;
-        
-      
-    
-    </summary>
-    
-    
-      <category term="知识分享" scheme="https://shirleydora.github.io/flower02/categories/%E7%9F%A5%E8%AF%86%E5%88%86%E4%BA%AB/"/>
-    
-    
-      <category term="angular" scheme="https://shirleydora.github.io/flower02/tags/angular/"/>
     
       <category term="前端" scheme="https://shirleydora.github.io/flower02/tags/%E5%89%8D%E7%AB%AF/"/>
     
